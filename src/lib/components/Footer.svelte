@@ -12,7 +12,7 @@
 				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="/feed">RSS</a>
+				<a href="/feed" target="_blank">RSS</a>
 			</li>
 		</ul>
 

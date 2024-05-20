@@ -1,6 +1,6 @@
 ---
 title: some other writing
-date: 17/5/2024
+date: 2024-05-19
 ---
 
 # This is just some other thoughts.

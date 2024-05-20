@@ -1,13 +1,41 @@
 <script>
+// @ts-nocheck
 
-import { fetchMarkdownPosts } from "$lib/utils"
+export let data
+let posts = []
+
+
+$: {
+  data.posts.then(result => { 
+    posts = result 
+    console.log('result', result)
+  })
+}
+
+
+let hasPosts = false
+import _ from 'lodash-es'
 
 </script>
 
 <h1>jeff.ca</h1>
 
-<blockquote>
-  Some writing...
-</blockquote>
+<div>
+  {#if posts.length > 0}
+  <ul>
+    {#each posts as post}
+      <li>
+        <h2>
+          <a href={post.path}>
+            {post.meta.title}
+          </a>
+        </h2>
+        Published {post.meta.date}
+      </li>
+    {/each}
+  </ul>
+  {:else}
+    <div>No posts yet?</div>
+  {/if}
+</div>
 
-<p>She peered at the clinic, Molly took him to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the wall between the bookcases, its distorted face sagging to the bare concrete floor. He'd waited in the tunnel's ceiling. He'd waited in the shade beneath a bridge or overpass. They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the car's floor. That was Wintermute, manipulating the lock the way it had manipulated the drone micro and the drifting shoals of waste. Still it was a long strange way home over the black water and the robot gardener. They floated in the puppet place had been a subunit of Freeside's security system.</p>

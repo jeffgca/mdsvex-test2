@@ -9,6 +9,10 @@ console.log('data', data)
 
 let hasPosts = false
 
+$: {
+  console.log('data', data.posts)
+}
+
 if (_.has(data, 'posts') && data.posts.length > 0) {
   hasPosts = true
 }
@@ -34,7 +38,5 @@ if (_.has(data, 'posts') && data.posts.length > 0) {
   {:else}
   <p>No posts found...</p>
   {/if}
-
-
 </div>
 
