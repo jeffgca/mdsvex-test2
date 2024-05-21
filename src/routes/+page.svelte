@@ -1,20 +1,13 @@
 <script>
 // @ts-nocheck
 
-export let data
-let posts = []
+import { posts_store } from "$lib/stores/posts"
 
+import Post from "$lib/components/Post.svelte";
 
-$: {
-  data.posts.then(result => { 
-    posts = result 
-    console.log('result', result)
-  })
-}
+console.log('posts_store', $posts_store)
 
-
-let hasPosts = false
-import _ from 'lodash-es'
+let posts = $posts_store.posts
 
 </script>
 
@@ -22,18 +15,9 @@ import _ from 'lodash-es'
 
 <div>
   {#if posts.length > 0}
-  <ul>
     {#each posts as post}
-      <li>
-        <h2>
-          <a href={post.path}>
-            {post.meta.title}
-          </a>
-        </h2>
-        Published {post.meta.date}
-      </li>
+      <Post {post} summary={true}/>
     {/each}
-  </ul>
   {:else}
     <div>No posts yet?</div>
   {/if}
