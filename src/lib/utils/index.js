@@ -7,13 +7,23 @@ function getSummary(html) {
 	let regex = new RegExp(/\<p [\s\S]+?\>([\S\s]+?)\<\/p>/, 'g')
 	let results = [...html.matchAll(regex)].shift()
 
-	console.log('getSummary', results[1])
-
 	if (results[0].length > 2) {
 		return { html: `<p>${results[1]}</p>` }
 	} else {
 		return false
 	}
+}
+
+/**
+ * Input:
+ * Output: YYYY-MM-DD / 2024-05-18
+ */
+export const formatDate = (dateString) => {
+	let dateObj = new Date(dateString)
+	let ret = `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()}`
+	console.log('dateString', dateString, ret)
+
+	return ret
 }
 
 export const fetchMarkdownPosts = async () => {

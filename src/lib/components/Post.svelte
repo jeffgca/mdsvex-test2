@@ -4,7 +4,9 @@
   export let post = []
   export let summary = false
 
-  // console.log('post', post)
+  import { formatDate } from "$lib/utils"
+
+  // console.log('post', post)/./;
 </script>
 
 <div>
@@ -13,7 +15,6 @@
       {post.meta.title}
     </a>
   </h2>
-  <div>Pubdished {post.meta.date}</div>
 
   {#if summary === true}
     {@html post.summary.html}
@@ -21,4 +22,5 @@
   {:else}
     {@html post.content.html}
   {/if}
+  <div>Published {new Date(post.meta.date).toDateString()}</div>
 </div>

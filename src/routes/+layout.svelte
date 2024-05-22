@@ -8,8 +8,6 @@
 
 	export let data
 
-	// console.log('data', data)
-
 	$posts_store = data
 
 </script>
@@ -22,4 +20,8 @@
 
 <Footer />
 
-<style></style>
+<style>
+
+@import '../css/prism.css';
+
+</style>

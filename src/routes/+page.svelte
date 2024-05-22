@@ -2,11 +2,7 @@
 // @ts-nocheck
 
 import { posts_store } from "$lib/stores/posts"
-
 import Post from "$lib/components/Post.svelte";
-
-console.log('posts_store', $posts_store)
-
 let posts = $posts_store.posts
 
 </script>
