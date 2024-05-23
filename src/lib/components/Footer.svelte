@@ -1,5 +1,5 @@
 <script>
-	// import 
+	import RssIcon from "./ui/rssIcon.svelte";
 </script>
 
 <footer>
@@ -12,9 +12,39 @@
 				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="/feed" target="_blank">RSS</a>
+				<a href="/feed" target="_blank"><RssIcon />  <span>RSS</span></a>
 			</li>
 		</ul>
-
 	</nav>
 </footer>
+
+<style>
+
+	footer {
+		padding: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: #232323;
+		color: #dedede;
+	}
+
+	ul {
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		gap: 1rem;
+	}
+
+	ul {
+		/* line-height: 3em; */
+		align-items: center;
+
+	}
+
+	ul li a span  {
+		vertical-align: baseline;
+	}
+
+
+</style>

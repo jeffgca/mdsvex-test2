@@ -42,6 +42,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"lodash-es": "^4.17.21"
+		"@rodneylab/svelte-social-icons": "^0.0.30",
+		"lodash-es": "^4.17.21",
+		"mdsvex-relative-images": "^1.0.3"
 	}
 }

@@ -12,16 +12,24 @@
 
 </script>
 
-<Header></Header>
-
-<main class="prose">
-	<slot></slot>
-</main>
-
-<Footer />
+<div class="wrapper">
+	<Header></Header>
+	
+	<main class="prose">
+		<slot></slot>
+	</main>
+	
+	<Footer />
+</div>
 
 <style>
 
 @import '../css/prism.css';
+
+.wrapper {
+	border-radius: 10px;
+	border: 1px solid #ababab;
+	margin: 10px;
+}
 
 </style>

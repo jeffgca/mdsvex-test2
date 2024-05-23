@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@rodneylab/svelte-social-icons':
+        specifier: ^0.0.30
+        version: 0.0.30(svelte@4.2.17)
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
@@ -315,6 +318,11 @@ packages:
 
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
+
+  '@rodneylab/svelte-social-icons@0.0.30':
+    resolution: {integrity: sha512-d3O71MWouQ/l0oaxwaJCCZEFaDsxcJoBjlKMCplWvTYRfKOsxW31eG3pE6nuQXDg5cI25vGmB7df4hvoxhL9lQ==}
+    peerDependencies:
+      svelte: '>=3 <5'
 
   '@rollup/rollup-android-arm-eabi@4.17.2':
     resolution: {integrity: sha512-NM0jFxY8bB8QLkoKxIQeObCaDlJKewVlIEkuyYKm5An1tdVZ966w2+MPQ2l8LBZLjR+SgyV+nRkTIunzOYBMLQ==}
@@ -1916,6 +1924,10 @@ snapshots:
       playwright: 1.44.0
 
   '@polka/url@1.0.0-next.25': {}
+
+  '@rodneylab/svelte-social-icons@0.0.30(svelte@4.2.17)':
+    dependencies:
+      svelte: 4.2.17
 
   '@rollup/rollup-android-arm-eabi@4.17.2':
     optional: true

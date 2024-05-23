@@ -1,5 +1,14 @@
 # TODOs
 
-- [ ] flowbite
-- [ ] prose
-- [ ] code highlighting
+## TODO
+
+- [ ] flowbite / theme
+- [ ] pagination
+- [ ] images
+- [ ] embeds / previews
+- [ ] github action
+
+## Done
+
+- [x] prose
+- [x] code highlighting
