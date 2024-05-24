@@ -46,7 +46,7 @@
 	}
 
 	nav.home-link > a {
-		display: inline;
-		border: 1px red dashed;
+		/* display: inline;
+		border: 1px red dashed; */
 	}
 </style>

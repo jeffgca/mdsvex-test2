@@ -15,7 +15,7 @@
 <div class="wrapper">
 	<Header></Header>
 	
-	<main class="prose">
+	<main>
 		<slot></slot>
 	</main>
 	

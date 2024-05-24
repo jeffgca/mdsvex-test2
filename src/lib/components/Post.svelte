@@ -12,7 +12,7 @@
 <div>
   <h2>
     <a href={post.path}>
-      {post.meta.title}
+      {post.title}
     </a>
   </h2>
 
@@ -22,5 +22,5 @@
   {:else}
     {@html post.content.html}
   {/if}
-  <div>Published {new Date(post.meta.date).toDateString()}</div>
+  <div>Published {new Date(post.date).toDateString()}</div>
 </div>

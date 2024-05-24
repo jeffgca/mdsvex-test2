@@ -44,12 +44,14 @@ export const fetchMarkdownPosts = async () => {
 			const postPath = path.replace('/src/routes', '').replace('/md', '').replace(/\.md$/, '')
 
 			return {
-				meta: post.metadata,
+				date: post.metadata.date,
+				title: post.metadata.title,
 				path: postPath,
 				content: content,
 				summary: summary
 			}
 		})
 	)
-	return posts
+
+	return _.orderBy(posts, ['date'], ['desc'])
 }

@@ -1,30 +1,25 @@
 <script>
 // @ts-nocheck
 
-import { posts_store } from "$lib/stores/posts"
-import Post from "$lib/components/Post.svelte";
+import Posts from "$lib/components/Posts.svelte"
 import { BugOutline } from 'flowbite-svelte-icons'
-let posts = $posts_store.posts
+
+export let data
+let summary = true
+const size = 6
+
+$: {
+  console.log('data', data)
+}
 
 </script>
 
 <h1>
   <a href="/">
     <span>
-      <BugOutline />
+      <BugOutline transform="rotate(135)" />
     </span> 
-    <span>jeff.ca</span>
   </a>
 </h1>
 
-<div>
-  {#if posts.length > 0}
-    {#each posts as post}
-        <Post {post} summary={true}/>
-    {/each}
-  {:else}
-    <div>No posts yet?</div>
-  {/if}
-</div>
-
-<!-- <style></style> -->
+<Posts {data} {size} {summary}/>
