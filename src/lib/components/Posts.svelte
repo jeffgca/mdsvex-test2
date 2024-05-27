@@ -62,14 +62,12 @@ $: {
 }
 
 function prev() {
-  console.log('clicked prev')
   if (currentSlug > 1) {
     goto(`/${currentSlug - 1}`)
   }
 }
 
 function next() {
-  console.log('clicked next')
   if (currentSlug < pages.length) {
     goto(`/${parseInt(currentSlug) + 1}`)
   }
