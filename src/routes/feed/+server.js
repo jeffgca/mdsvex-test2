@@ -1,9 +1,7 @@
 import { fetchMarkdownPosts } from '$lib/utils'
-
 const siteURL = 'https://jeffg.ca'
 const siteTitle = 'jeff gee dot see, eh'
 const siteDescription = 'Random ideas from my virtual desk.'
-
 export const prerender = true
 
 export const GET = async () => {
@@ -33,9 +31,9 @@ const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 ${posts
 	.map(
 		(post) => `<item>
-<guid isPermaLink="true">${siteURL}/blog/${post.path}</guid>
+<guid isPermaLink="true">${siteURL}/posts/${post.path}</guid>
 <title>${post.title}</title>
-<link>${siteURL}/blog/${post.path}</link>
+<link>${siteURL}/posts/${post.path}</link>
 <description>${post.summary.html}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`
