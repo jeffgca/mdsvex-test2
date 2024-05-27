@@ -10,13 +10,11 @@ let posts = $posts_store.posts
 
 </script>
 
-<h1 class="page-title">Archive of all posts</h1>
-
-<div>
+<div class="prose">
+  <h1 class="page-title">Archive of all posts</h1>
   {#if posts.length > 0}
     {#each posts as post}
       <Post {post} />
     {/each}
   {/if}
-
 </div>

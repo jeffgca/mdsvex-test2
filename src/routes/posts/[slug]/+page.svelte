@@ -2,7 +2,7 @@
 	export let data;
 </script>
 
-<article>
-	<p>Published: {data.date}</p>
+<article class="prose">
 	<svelte:component this={data.content} />
+	<p>Published {new Date(data.date).toDateString()}</p>
 </article>

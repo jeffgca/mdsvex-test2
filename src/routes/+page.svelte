@@ -8,18 +8,14 @@ export let data
 let summary = true
 const size = 6
 
-$: {
-  console.log('data', data)
-}
-
 </script>
 
-<h1>
+<!-- <h1>
   <a href="/">
     <span>
       <BugOutline transform="rotate(135)" />
     </span> 
   </a>
-</h1>
+</h1> -->
 
 <Posts {data} {size} {summary}/>
