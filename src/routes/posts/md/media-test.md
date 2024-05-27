@@ -6,11 +6,11 @@ date: 2024-05-22
 
 This is a test of pictures and embeds located directly in /static/
 
-![](/img/trash_panda.png)
+![Trash panda icon](/img/trash_panda.png)
 
 This is a test of a picture located on a relative path?
 
-![](./img/skull.png)
+![Flaming skull icon](./img/skull.png)
 
 This is a twitter / x link:
 
