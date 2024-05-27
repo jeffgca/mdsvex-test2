@@ -9,7 +9,7 @@ export const prerender = true
 export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts()
 
-	console.log('allPosts', allPosts)
+	// console.log('allPosts', allPosts)
 	const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date))
 
 	const body = render(sortedPosts)
@@ -34,10 +34,10 @@ ${posts
 	.map(
 		(post) => `<item>
 <guid isPermaLink="true">${siteURL}/blog/${post.path}</guid>
-<title>${post.meta.title}</title>
+<title>${post.title}</title>
 <link>${siteURL}/blog/${post.path}</link>
 <description>${post.summary.html}</description>
-<pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
+<pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`
 	)
 	.join('')}
