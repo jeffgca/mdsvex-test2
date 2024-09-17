@@ -23,13 +23,4 @@
 </div>
 
 <style>
-
-@import '../css/prism.css';
-
-.wrapper {
-	border-radius: 10px;
-	border: 1px solid #ababab;
-	margin: 10px;
-}
-
 </style>

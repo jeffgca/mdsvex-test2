@@ -1,3 +1,10 @@
+@import '../css/prism.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+	border-radius: 10px;
+	border: 1px solid #ababab;
+	margin: 10px;
+}

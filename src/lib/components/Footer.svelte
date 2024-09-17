@@ -1,5 +1,5 @@
 <script>
-	import RssIcon from "./ui/rssIcon.svelte";
+	import SocialIcons from '@rodneylab/svelte-social-icons'
 </script>
 
 <footer>
@@ -12,7 +12,10 @@
 				<a href="/about">About</a>
 			</li>
 			<li>
-				<a href="/feed" target="_blank"><RssIcon />  <span>RSS</span></a>
+				<a href="/feed" target="_blank">
+					
+					<span>Feed</span>
+				</a>
 			</li>
 		</ul>
 	</nav>

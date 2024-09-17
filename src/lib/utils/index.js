@@ -27,6 +27,7 @@ export const formatDate = (dateString) => {
 }
 
 export const fetchMarkdownPosts = async () => {
+	console.log(`fetchMarkdownPosts>`)
 	const allPostFiles = import.meta.glob('/src/routes/posts/md/*.md')
 
 	const iterablePostFiles = Object.entries(allPostFiles)
