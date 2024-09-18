@@ -24,29 +24,4 @@
 </div>
 
 <style>
-	header {
-		padding: 1rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		background-color: #232323;
-		color: #dedede;
-	}
-
-	ul {
-		margin: 0;
-		list-style-type: none;
-		display: flex;
-		gap: 1rem;
-	}
-
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-
-	nav.home-link > a {
-		/* display: inline;
-		border: 1px red dashed; */
-	}
 </style>

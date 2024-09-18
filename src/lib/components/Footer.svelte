@@ -1,5 +1,5 @@
 <script>
-	import SocialIcons from '@rodneylab/svelte-social-icons'
+	// import SocialIcons from '@rodneylab/svelte-social-icons'
 </script>
 
 <footer>
