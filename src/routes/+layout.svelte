@@ -1,7 +1,26 @@
 <script>
-	import '../app.css';
+	import '../app.css'
+	import '$lib/styles/style.css'
+	import Header from '$lib/components/Header.svelte'
+	import Footer from '$lib/components/Footer.svelte'
 
-	let { children } = $props();
+	import { posts_store } from '$lib/stores/posts'
+
+	let { data, children } = $props();
+
+	$posts_store = data
+
 </script>
 
-{@render children()}
+<div class="wrapper">
+	<Header></Header>
+	
+	<main>
+		{@render children?.()}
+	</main>
+	
+	<Footer />
+</div>
+
+<style>
+</style>
