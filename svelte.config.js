@@ -1,10 +1,16 @@
-import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-static';
+import { mdsvex } from 'mdsvex'
+import relativeImages from 'mdsvex-relative-images'
+import adapter from '@sveltejs/adapter-node'
 
 const config = {
 	kit: { adapter: adapter() },
-	preprocess: [mdsvex()],
-	extensions: ['.svelte', '.svx']
-};
+	extensions: ['.svelte', '.svx', '.md'],
+	preprocess: [
+		mdsvex({
+			extensions: ['.svx', '.md'],
+			remarkPlugins: [relativeImages],
+		}),
+	],
+}
 
-export default config;
+export default config

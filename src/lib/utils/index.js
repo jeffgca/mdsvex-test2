@@ -1,10 +1,11 @@
 import _ from 'lodash-es'
+import { render } from 'svelte/server'
 
 /**
  * get the first paragraph from the html.
  */
 function getSummary(html) {
-	let regex = new RegExp(/\<p [\s\S]+?\>([\S\s]+?)\<\/p>/, 'g')
+	let regex = new RegExp(/<p [\s\S]+?>([\S\s]+?)<\/p>/, 'g')
 	let results = [...html.matchAll(regex)].shift()
 
 	if (results[0].length > 2) {
@@ -35,23 +36,28 @@ export const fetchMarkdownPosts = async () => {
 	const posts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
-			let content = { html: '' }
-			let summary = { html: '' }
+			let content = { html: 'contentn XXX' }
+			let summary = { html: 'summary XXX' }
 			if (_.has(post, 'default') && _.has(post.default, 'render')) {
-				content = await post.default.render()
-				summary = getSummary(content.html)
+				let _tmp = post.default
+				content = render(_tmp, { props: {} }).html
+
+				// summary = getSummary(content.html)
 			}
 
-			const postPath = path.replace('/src/routes', '').replace('/md', '').replace(/\.md$/, '')
+			const postPath = path
+				.replace('/src/routes', '')
+				.replace('/md', '')
+				.replace(/\.md$/, '')
 
 			return {
 				date: post.metadata.date,
 				title: post.metadata.title,
 				path: postPath,
 				content: content,
-				summary: summary
+				summary: summary,
 			}
-		})
+		}),
 	)
 
 	return _.orderBy(posts, ['date'], ['desc'])
