@@ -5,8 +5,10 @@ import { render } from 'svelte/server'
  * get the first paragraph from the html.
  */
 function getSummary(html) {
-	let regex = new RegExp(/<p [\s\S]+?>([\S\s]+?)<\/p>/, 'g')
+	let regex = new RegExp(/<p>([\S\s]+?)<\/p>/, 'gm')
 	let results = [...html.matchAll(regex)].shift()
+
+	// console.log('results', results)
 
 	if (results[0].length > 2) {
 		return { html: `<p>${results[1]}</p>` }
@@ -28,21 +30,22 @@ export const formatDate = (dateString) => {
 }
 
 export const fetchMarkdownPosts = async () => {
-	console.log(`fetchMarkdownPosts>`)
 	const allPostFiles = import.meta.glob('/src/routes/posts/md/*.md')
 
 	const iterablePostFiles = Object.entries(allPostFiles)
 
+	iterablePostFiles.length = 3
+
 	const posts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
-			let content = { html: 'contentn XXX' }
+			let content = { html: 'content XXX' }
 			let summary = { html: 'summary XXX' }
 			if (_.has(post, 'default') && _.has(post.default, 'render')) {
 				let _tmp = post.default
 				content = render(_tmp, { props: {} }).html
 
-				// summary = getSummary(content.html)
+				summary = getSummary(content)
 			}
 
 			const postPath = path

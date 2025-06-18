@@ -38,7 +38,7 @@
 			let _index = i + 1
 			return {
 				name: _index,
-				href: `${path}${_index}`
+				href: `${path}${_index}`,
 			}
 		})
 	}
@@ -85,7 +85,8 @@
 <div class="content-wrapper prose">
 	{#if posts.length > 0}
 		{#each posts as post}
-			<Post {post} {summary} />
+			<!-- <Post {post} {summary} /> -->
+			<Post {post} />
 		{/each}
 	{:else}
 		<div>No posts yet?</div>
