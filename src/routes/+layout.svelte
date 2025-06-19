@@ -6,10 +6,17 @@
 
 	import { posts_store } from '$lib/stores/posts'
 
+	import { base } from '$app/paths'
+	console.log('Layout', base)
+
 	let { data, children } = $props()
 
 	$posts_store = data
 </script>
+
+<svelte:head>
+	<base href={base} />
+</svelte:head>
 
 <div class="wrapper">
 	<Header></Header>

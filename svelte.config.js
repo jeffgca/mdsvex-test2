@@ -2,7 +2,7 @@ import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import adapterGhpages from 'svelte-adapter-ghpages'
 
-console.log('xxx NODE_ENV', process.env.BUILD_MODE)
+console.log('xxx BUILD_MODE', process.env.BUILD_MODE)
 
 const ghpagesBase = '/mdsvex-test2'
 

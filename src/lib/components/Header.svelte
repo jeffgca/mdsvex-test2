@@ -7,6 +7,7 @@
 	<header>
 		<nav class=" flex home-link">
 			<a class="flex" href="{base}/">Home</a>
+			<a class="flex" href="/">Home</a>
 		</nav>
 
 		<nav>

@@ -34,8 +34,6 @@ export const fetchMarkdownPosts = async () => {
 
 	const iterablePostFiles = Object.entries(allPostFiles)
 
-	iterablePostFiles.length = 3
-
 	const posts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
