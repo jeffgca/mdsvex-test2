@@ -3,26 +3,18 @@ import relativeImages from 'mdsvex-relative-images'
 import adapterGhpages from 'svelte-adapter-ghpages'
 import imgLinks from '@pondorasti/remark-img-links'
 // import RemarkLinkRewrite from 'remark-link-rewrite'
+console.log('xxx BUILD_MODE', process.env.BUILD_MODE)
 
 const ghpagesBase = '/mdsvex-test2'
 let blogUrl = '/'
 let plugins = []
 
 if (process.env.BUILD_MODE === 'production') {
-	blogUrl = `https://jeffgca.github.io${ghpagesBase}`
+	blogUrl = `https://jeffgca.github.io/mdsvex-test2`
 	plugins.push([imgLinks, { absolutePath: blogUrl }])
+} else {
+	plugins.push(relativeImages)
 }
-
-// const rewriteOptions = {
-// 	replacer: (url) => {
-// 		if (url.startsWith('/')) {
-// 			return `${ghpagesBase}${url}`
-// 		}
-// 		return url
-// 	},
-// }
-
-console.log('xxx BUILD_MODE', process.env.BUILD_MODE)
 
 const config = {
 	kit: {
