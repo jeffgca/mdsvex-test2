@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>jeff gee dot see, eh</title>
+<description>Random ideas from my virtual desk.</description>
+<link>https://jeffg.ca</link>
+<atom:link href="https://jeffg.ca/feed" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">https://jeffg.ca/posts//posts/first-post</guid>
+<title>First Post!</title>
+<link>https://jeffg.ca/posts//posts/first-post</link>
+<description>summary XXX</description>
+<pubDate>Sat, 18 May 2024 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://jeffg.ca/posts//posts/donec-dapibus-duis-2023-09-22</guid>
+<title>donec dapibus duis</title>
+<link>https://jeffg.ca/posts//posts/donec-dapibus-duis-2023-09-22</link>
+<description>summary XXX</description>
+<pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://jeffg.ca/posts//posts/amet-lobortis-sapien-sapien-2023-08-03</guid>
+<title>amet lobortis sapien sapien</title>
+<link>https://jeffg.ca/posts//posts/amet-lobortis-sapien-sapien-2023-08-03</link>
+<description>summary XXX</description>
+<pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

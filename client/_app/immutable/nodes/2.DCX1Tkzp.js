@@ -1,0 +1,1 @@
+import"../chunks/CNxMpzt5.js";import{P as o}from"../chunks/BsJ5ySQl.js";async function r({params:e}){return e}const i=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));function m(e,t){o(e,{get data(){return t.data},size:6,summary:!0})}export{m as component,i as universal};
