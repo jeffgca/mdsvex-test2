@@ -1,6 +1,6 @@
 import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
-import adapter from '@sveltejs/adapter-node'
+import adapter from '@sveltejs/adapter-static'
 
 const config = {
 	kit: { adapter: adapter() },

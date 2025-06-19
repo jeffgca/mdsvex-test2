@@ -1,13 +1,10 @@
 <script>
-	import { BugOutline } from 'flowbite-svelte-icons'
 </script>
 
 <div>
 	<header>
-		<nav class="home-link">
-			<a href="/">
-					<BugOutline color="green" transform="rotate(45)" size="xl"/>
-			</a>
+		<nav class=" flex home-link">
+			<a class="flex" href="/">Home</a>
 		</nav>
 
 		<nav>
