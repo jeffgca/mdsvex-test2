@@ -27,10 +27,10 @@ This is a youtube link:
 https://www.youtube.com/watch?v=MTpyHB8KIy4
 `
 
-console.log('got here')
+// console.log('got here')
 
 remark()
-	.use(imgLinks, { absolutePath: 'https://cdn.domain.com/' })
+	.use(imgLinks, { absolutePath: 'https://jeffgca.github.io/mdsvex-test2/' })
 	.use(html)
 	.process(_md, (err, file) => {
 		if (err) throw err
