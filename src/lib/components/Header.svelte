@@ -7,16 +7,16 @@
 	<header>
 		<nav class=" flex home-link">
 			<a class="flex" href="{base}/">Home</a>
-			<nav>
-				<ul>
-					<li>
-						<a href="{base}/posts">Archive</a>
-					</li>
-					<li>
-						<a href="{base}/about">About</a>
-					</li>
-				</ul>
-			</nav>
+		</nav>
+		<nav>
+			<ul>
+				<li>
+					<a href="{base}/posts">Archive</a>
+				</li>
+				<li>
+					<a href="{base}/about">About</a>
+				</li>
+			</ul>
 		</nav>
 	</header>
 </div>
