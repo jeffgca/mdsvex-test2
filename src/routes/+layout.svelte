@@ -6,19 +6,18 @@
 
 	import { posts_store } from '$lib/stores/posts'
 
-	let { data, children } = $props();
+	let { data, children } = $props()
 
 	$posts_store = data
-
 </script>
 
 <div class="wrapper">
 	<Header></Header>
-	
+
 	<main>
 		{@render children?.()}
 	</main>
-	
+
 	<Footer />
 </div>
 

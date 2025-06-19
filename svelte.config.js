@@ -1,7 +1,8 @@
 import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
-// import adapter from '@sveltejs/adapter-static'
 import adapterGhpages from 'svelte-adapter-ghpages'
+
+const ghpagesBase = '/mdsvex-test2'
 
 const config = {
 	kit: {
@@ -11,6 +12,9 @@ const config = {
 			assets: 'build',
 			fallback: null,
 		}),
+	},
+	paths: {
+		base: process.env.NODE_ENV === 'production' ? ghpagesBase : '',
 	},
 	extensions: ['.svelte', '.svx', '.md'],
 	preprocess: [

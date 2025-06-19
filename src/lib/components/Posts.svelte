@@ -2,11 +2,7 @@
 	// @ts-nocheck
 
 	import { run } from 'svelte/legacy'
-
-	// @ts-nocheck
-
 	import { goto } from '$app/navigation'
-
 	import _ from 'lodash-es'
 	import { Pagination } from 'flowbite-svelte'
 

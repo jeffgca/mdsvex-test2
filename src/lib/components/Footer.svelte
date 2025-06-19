@@ -1,5 +1,5 @@
 <script>
-	// import SocialIcons from '@rodneylab/svelte-social-icons'
+	import { base } from '$app/paths'
 </script>
 
 <footer>
@@ -13,7 +13,6 @@
 			</li>
 			<li>
 				<a href="/feed" target="_blank">
-					
 					<span>Feed</span>
 				</a>
 			</li>
@@ -22,7 +21,6 @@
 </footer>
 
 <style>
-
 	footer {
 		padding: 1rem;
 		display: flex;
@@ -42,12 +40,9 @@
 	ul {
 		/* line-height: 3em; */
 		align-items: center;
-
 	}
 
-	ul li a span  {
+	ul li a span {
 		vertical-align: baseline;
 	}
-
-
 </style>

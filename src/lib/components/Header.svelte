@@ -1,19 +1,20 @@
 <script>
+	import { base } from '$app/paths'
 </script>
 
 <div>
 	<header>
 		<nav class=" flex home-link">
-			<a class="flex" href="/">Home</a>
+			<a class="flex" href="{base}/">Home</a>
 		</nav>
 
 		<nav>
 			<ul>
 				<li>
-					<a href="/posts">Archive</a>
+					<a href="{base}/posts">Archive</a>
 				</li>
 				<li>
-					<a href="/about">About</a>
+					<a href="{base}/about">About</a>
 				</li>
 			</ul>
 		</nav>
