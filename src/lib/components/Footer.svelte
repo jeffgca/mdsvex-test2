@@ -1,18 +1,19 @@
 <script>
 	import { base } from '$app/paths'
+	console.log('Footer', base)
 </script>
 
 <footer>
 	<nav>
 		<ul>
 			<li>
-				<a href="/posts">Archive</a>
+				<a href="{base}/posts">Archive</a>
 			</li>
 			<li>
-				<a href="/about">About</a>
+				<a href="{base}/about">About</a>
 			</li>
 			<li>
-				<a href="/feed" target="_blank">
+				<a href="{base}/feed" target="_blank">
 					<span>Feed</span>
 				</a>
 			</li>

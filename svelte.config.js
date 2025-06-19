@@ -2,6 +2,8 @@ import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import adapterGhpages from 'svelte-adapter-ghpages'
 
+console.log('xxx NODE_ENV', process.env.BUILD_MODE)
+
 const ghpagesBase = '/mdsvex-test2'
 
 const config = {
@@ -14,7 +16,7 @@ const config = {
 		}),
 	},
 	paths: {
-		base: process.env.NODE_ENV === 'production' ? ghpagesBase : '',
+		base: process.env.BUILD_MODE === 'production' ? ghpagesBase : '',
 	},
 	extensions: ['.svelte', '.svx', '.md'],
 	preprocess: [
@@ -24,5 +26,7 @@ const config = {
 		}),
 	],
 }
+
+console.log('XXX', config.paths)
 
 export default config

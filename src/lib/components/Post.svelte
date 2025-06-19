@@ -8,18 +8,19 @@
 
 	/** @type {Props} */
 	let { post = [], summary = false } = $props()
+	import { base } from '$app/paths'
 </script>
 
 <div>
 	<h2>
-		<a href={post.path}>
+		<a href="{base}{post.path}">
 			{post.title}
 		</a>
 	</h2>
 
 	{#if summary === true}
 		{@html post.summary.html}
-		<div><a href={post.path}>Read more...</a></div>
+		<div><a href="{base}{post.path}">Read more...</a></div>
 	{:else}
 		{@html post.content.html}
 	{/if}
