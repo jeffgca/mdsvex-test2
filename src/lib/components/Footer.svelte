@@ -17,6 +17,11 @@
 					<span>Feed</span>
 				</a>
 			</li>
+			<li>
+				<a href="{base}/debug">
+					<span>Debug</span>
+				</a>
+			</li>
 		</ul>
 	</nav>
 </footer>
