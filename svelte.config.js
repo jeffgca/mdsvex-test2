@@ -2,21 +2,31 @@ import { mdsvex } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import adapterGhpages from 'svelte-adapter-ghpages'
 import imgLinks from '@pondorasti/remark-img-links'
+import 'dotenv/config'
+
+// console.log('XXX ENV', process.env)
 // import RemarkLinkRewrite from 'remark-link-rewrite'
-console.log('xxx BUILD_MODE', process.env.BUILD_MODE)
+console.log(
+	'xxx ENV',
+	process.env.BUILD_MODE,
+	process.env.PAGES_BASE,
+	process.env.BLOG_URL,
+	process.env.BLOG_TITLE,
+)
 
 const ghpagesBase = '/mdsvex-test2/'
 let blogUrl = '/'
 let plugins = [relativeImages]
+// let plugins = []
 
 if (process.env.BUILD_MODE === 'production') {
-	blogUrl = `https://jeffgca.github.io/mdsvex-test2/`
+	blogUrl = `${process.env.BLOG_URL}${process.env.PAGES_BASE}/`
 	plugins.push([imgLinks, { absolutePath: blogUrl }])
 }
 
 // plugins.push(relativeImages)
 
-console.log('XXX plugins', plugins)
+// console.log('XXX plugins', plugins)
 
 const config = {
 	kit: {
