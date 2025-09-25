@@ -1,6 +1,10 @@
 <script>
 	import { base } from '$app/paths'
-	console.log('Footer', base)
+
+	import { resolve } from '$app/paths'
+
+	let _base = resolve('/')
+	// console.log('Footer', base, _base)
 </script>
 
 <footer>

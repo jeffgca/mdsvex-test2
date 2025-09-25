@@ -14,7 +14,6 @@ console.log(
 	process.env.BLOG_TITLE,
 )
 
-const ghpagesBase = '/mdsvex-test2/'
 let blogUrl = '/'
 let plugins = [relativeImages]
 // let plugins = []
@@ -38,7 +37,7 @@ const config = {
 		}),
 	},
 	paths: {
-		base: process.env.BUILD_MODE === 'production' ? ghpagesBase : '',
+		base: process.env.BUILD_MODE === 'production' ? process.env.PAGES_BASE : '',
 	},
 	extensions: ['.svelte', '.svx', '.md'],
 	preprocess: [
