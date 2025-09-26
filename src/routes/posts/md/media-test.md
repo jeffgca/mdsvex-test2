@@ -4,9 +4,9 @@ description: Something...
 date: 2024-05-22
 ---
 
-This is a test of pictures and embeds located directly in /static/
+This is a test of a picture located on a relative path?
 
-![Trash panda icon](/img/trash_panda.png)
+![Flaming skull icon](./img/skull.png)
 
 This is a twitter / x link:
 
