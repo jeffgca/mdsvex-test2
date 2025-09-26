@@ -34,6 +34,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.1.0
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -41,7 +43,6 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-
       - name: build
         run: |
           pnpm run build
