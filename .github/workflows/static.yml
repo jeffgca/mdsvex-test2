@@ -38,13 +38,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: build
         run: |
-          npm run build
+          pnpm run build
           touch build/.nojekyll
 
       - name: Setup Pages
