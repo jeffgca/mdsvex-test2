@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 env:
   BUILD_MODE: production
   PAGES_BASE: mdsvex-test2
-  BLOG_URL: 'https://jeffgca.github.io'
+  BLOG_URL: 'https://jeffgca.github.io/'
 
 on:
   # Runs on pushes targeting the default branch
