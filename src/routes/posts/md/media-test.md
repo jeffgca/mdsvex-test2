@@ -4,9 +4,13 @@ description: Something...
 date: 2024-05-22
 ---
 
-This is a test of a picture located on a relative path?
+This is a test of a picture located in /static/img ?
 
-![Flaming skull icon](./img/trash_panda.png)
+![Trash Panda](/static/img/trash_panda.png)
+
+This is a test of a picture in the md folder?
+
+![Flaming skull](./images/skull.png)
 
 This is a twitter / x link:
 
