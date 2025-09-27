@@ -6,11 +6,11 @@ date: 2024-05-22
 
 This is a test of a picture located in /static/img ?
 
-![Trash Panda](/static/img/trash_panda.png)
+![Trash Panda](/img/trash_panda.png)
 
 This is a test of a picture in the md folder?
 
-![Flaming skull](./images/skull.png)
+![Flaming skull](/img/skull.png)
 
 This is a twitter / x link:
 
