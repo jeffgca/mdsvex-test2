@@ -8,9 +8,13 @@ This is a test of a picture located in /static/img ?
 
 ![Trash Panda](/img/trash_panda.png)
 
-This is a test of a picture in the md folder?
+This is a test of a picture in the static folder?
 
 ![Flaming skull](/img/skull.png)
+
+This is a test of a picture in the md folder?
+
+![Flaming skull](./images/skull.png)
 
 This is a twitter / x link:
 
