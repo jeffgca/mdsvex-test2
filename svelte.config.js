@@ -15,17 +15,17 @@ console.log(
 )
 
 let blogUrl = '/'
-let plugins = [relativeImages]
-// let plugins = []
+// let plugins = [relativeImages]
+let plugins = []
 
 if (process.env.BUILD_MODE === 'production') {
 	blogUrl = `${process.env.BLOG_URL}${process.env.PAGES_BASE}/`
 	plugins.push([imgLinks, { absolutePath: blogUrl }])
 }
 
-// plugins.push(relativeImages)
+plugins.push(relativeImages)
 
-// console.log('XXX plugins', plugins)
+console.log('XXX plugins', plugins)
 
 const config = {
 	kit: {
