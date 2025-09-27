@@ -4,6 +4,7 @@ name: Deploy static content to Pages
 env:
   BUILD_MODE: production
   PAGES_BASE: mdsvex-test2
+  BLOG_URL: 'https://jeffgca.github.io'
 
 on:
   # Runs on pushes targeting the default branch
@@ -29,7 +30,7 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     environment:
-      name: github-pages
+      name: PAGES_BASE
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:

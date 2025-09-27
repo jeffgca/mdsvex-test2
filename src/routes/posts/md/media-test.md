@@ -6,7 +6,7 @@ date: 2024-05-22
 
 This is a test of a picture located on a relative path?
 
-![Flaming skull icon](./img/skull.png)
+![Flaming skull icon](./img/trash_panda.png)
 
 This is a twitter / x link:
 
