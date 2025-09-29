@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+pre.shiki {
+	padding: 1.2em;
+	border-radius: 10px;
+	overflow-x: auto;
+}
+
 .wrapper {
 	border-radius: 10px;
 	border: 1px solid #ababab;
