@@ -4,8 +4,9 @@
 
 ## TODO:
 
-- bun or deno binary distribution?
 - build-time embeds
+- syntax highlighting
+- bun or deno binary distribution?
 
 ## DONE
 

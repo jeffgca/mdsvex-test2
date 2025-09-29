@@ -1,18 +1,11 @@
-import { mdsvex } from 'mdsvex'
+import { mdsvex, escapeSvelte } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import adapterGhpages from 'svelte-adapter-ghpages'
 import imgLinks from '@pondorasti/remark-img-links'
-import 'dotenv/config'
+import { createHighlighter } from 'shiki'
 
-// console.log('XXX ENV', process.env)
-// import RemarkLinkRewrite from 'remark-link-rewrite'
-console.log(
-	'xxx ENV',
-	process.env.BUILD_MODE,
-	process.env.PAGES_BASE,
-	process.env.BLOG_URL,
-	process.env.BLOG_TITLE,
-)
+// import { getOpenGraph, getTwitterCard } from './src/lib/scripts/opengraph.js'
+import 'dotenv/config'
 
 let blogUrl = '/'
 let plugins = []
@@ -24,7 +17,12 @@ if (process.env.BUILD_MODE === 'production') {
 	plugins.push([imgLinks, { absolutePath: blogUrl }])
 }
 
-console.log('XXX plugins', plugins)
+const theme = 'github-dark'
+
+const highlighter = await createHighlighter({
+	themes: [theme],
+	langs: ['javascript', 'typescript'],
+})
 
 const config = {
 	kit: {
@@ -43,10 +41,18 @@ const config = {
 		mdsvex({
 			extensions: ['.svx', '.md'],
 			remarkPlugins: plugins,
+			highlight: {
+				highlighter: async (code, lang) => {
+					const html = escapeSvelte(
+						highlighter.codeToHtml(code, { lang, theme }),
+					)
+					return `{@html \`${html}\` }`
+				},
+			},
 		}),
 	],
 }
 
-console.log('XXX', config.paths)
+// console.log('XXX', config.paths)
 
 export default config

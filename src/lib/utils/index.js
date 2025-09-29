@@ -5,10 +5,11 @@ import { render } from 'svelte/server'
  * get the first paragraph from the html.
  */
 function getSummary(html) {
+	// console.log('html', html)
 	let regex = new RegExp(/<p>([\S\s]+?)<\/p>/, 'gm')
 	let results = [...html.matchAll(regex)].shift()
 
-	// console.log('results', results)
+	console.log('results', results)
 
 	if (results[0].length > 2) {
 		return { html: `<p>${results[1]}</p>` }
@@ -37,8 +38,12 @@ export const fetchMarkdownPosts = async () => {
 	const posts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
+
+			// console.log('post', post)
+
 			let content = { html: 'content XXX' }
 			let summary = { html: 'summary XXX' }
+
 			if (_.has(post, 'default') && _.has(post.default, 'render')) {
 				let _tmp = post.default
 				content = render(_tmp, { props: {} }).html

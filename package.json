@@ -17,6 +17,7 @@
 		"@eslint/compat": "^1.4.0",
 		"@eslint/js": "^9.36.0",
 		"@pondorasti/remark-img-links": "^1.0.8",
+		"@shikijs/rehype": "^3.13.0",
 		"@sveltejs/adapter-static": "^3.0.9",
 		"@sveltejs/kit": "^2.43.4",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
@@ -46,7 +47,9 @@
 		"dotenv": "^17.2.2",
 		"flowbite-svelte": "^1.14.6",
 		"lodash-es": "^4.17.21",
-		"mdsvex-relative-images": "^2.0.0"
+		"mdsvex-relative-images": "^2.0.0",
+		"open-graph-scraper": "^6.10.0",
+		"shiki": "^3.13.0"
 	},
 	"pnpm": {
 		"overrides": {
