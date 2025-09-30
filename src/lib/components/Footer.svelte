@@ -1,10 +1,13 @@
 <script>
-	import { base } from '$app/paths'
+	// @ts-nocheck
+	import { base, resolve } from '$app/paths'
+	import _ from 'lodash-es'
 
-	import { resolve } from '$app/paths'
-
-	let _base = resolve('/')
-	// console.log('Footer', base, _base)
+	// console.log(
+	// 	_.map(['foo', 'bar', 'baz'], (str) => {
+	// 		return resolve(`${base}/${str}`)
+	// 	}),
+	// )
 </script>
 
 <footer>
@@ -19,11 +22,6 @@
 			<li>
 				<a href="{base}/feed" target="_blank">
 					<span>Feed</span>
-				</a>
-			</li>
-			<li>
-				<a href="{base}/debug">
-					<span>Debug</span>
 				</a>
 			</li>
 		</ul>

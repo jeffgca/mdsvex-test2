@@ -81,8 +81,7 @@
 <div class="content-wrapper prose">
 	{#if posts.length > 0}
 		{#each posts as post}
-			<!-- <Post {post} {summary} /> -->
-			<Post {post} />
+			<Post {post} {summary} />
 		{/each}
 	{:else}
 		<div>No posts yet?</div>

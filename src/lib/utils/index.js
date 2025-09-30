@@ -5,11 +5,10 @@ import { render } from 'svelte/server'
  * get the first paragraph from the html.
  */
 function getSummary(html) {
-	// console.log('html', html)
 	let regex = new RegExp(/<p>([\S\s]+?)<\/p>/, 'gm')
 	let results = [...html.matchAll(regex)].shift()
 
-	console.log('results', results)
+	// console.log('XXX getSummary', results)
 
 	if (results[0].length > 2) {
 		return { html: `<p>${results[1]}</p>` }
@@ -25,8 +24,6 @@ function getSummary(html) {
 export const formatDate = (dateString) => {
 	let dateObj = new Date(dateString)
 	let ret = `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()}`
-	console.log('dateString', dateString, ret)
-
 	return ret
 }
 
@@ -39,16 +36,19 @@ export const fetchMarkdownPosts = async () => {
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
 
-			// console.log('post', post)
-
 			let content = { html: 'content XXX' }
 			let summary = { html: 'summary XXX' }
 
-			if (_.has(post, 'default') && _.has(post.default, 'render')) {
+			if (_.has(post, 'default')) {
+				// console.log('XXX got here', post.default)
 				let _tmp = post.default
 				content = render(_tmp, { props: {} }).html
 
 				summary = getSummary(content)
+
+				// console.log('XXX Summary', summary)
+			} else {
+				console.warn('XXX no render function found on post', post)
 			}
 
 			const postPath = path
@@ -56,13 +56,15 @@ export const fetchMarkdownPosts = async () => {
 				.replace('/md', '')
 				.replace(/\.md$/, '')
 
-			return {
+			let ret = {
 				date: post.metadata.date,
 				title: post.metadata.title,
 				path: postPath,
 				content: content,
 				summary: summary,
 			}
+
+			return ret
 		}),
 	)
 

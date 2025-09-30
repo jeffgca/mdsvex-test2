@@ -11,12 +11,8 @@
 	$posts_store = data
 </script>
 
-<svelte:head>
-	<!-- <base href={base} /> -->
-</svelte:head>
-
 <div class="wrapper">
-	<Header></Header>
+	<Header />
 
 	<main>
 		{@render children?.()}
