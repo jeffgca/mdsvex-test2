@@ -14,6 +14,7 @@ plugins.push(relativeImages)
 
 if (process.env.BUILD_MODE === 'production') {
 	blogUrl = `${process.env.BLOG_URL}${process.env.PAGES_BASE}/`
+	// blogUrl = `${process.env.PAGES_BASE}/`
 	plugins.push([imgLinks, { absolutePath: blogUrl }])
 }
 
