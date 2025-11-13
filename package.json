@@ -14,46 +14,49 @@
 		"lint": "prettier --check . && eslint ."
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.4.0",
-		"@eslint/js": "^9.36.0",
+		"@eslint/compat": "^1.4.1",
+		"@eslint/js": "^9.39.1",
 		"@pondorasti/remark-img-links": "^1.0.8",
-		"@shikijs/rehype": "^3.13.0",
-		"@sveltejs/adapter-static": "^3.0.9",
-		"@sveltejs/kit": "^2.43.4",
+		"@shikijs/rehype": "^3.15.0",
+		"@sveltejs/adapter-node": "^5.4.0",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.48.4",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
 		"@tailwindcss/typography": "^0.5.19",
-		"@tailwindcss/vite": "^4.1.13",
-		"eslint": "^9.36.0",
+		"@tailwindcss/vite": "^4.1.17",
+		"eslint": "^9.39.1",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-svelte": "^3.12.4",
-		"globals": "^16.4.0",
+		"eslint-plugin-svelte": "^3.13.0",
+		"globals": "^16.5.0",
 		"mdsvex": "^0.12.6",
+		"mdsvex-relative-images": "^2.0.0",
 		"prettier": "^3.6.2",
 		"prettier-plugin-svelte": "^3.4.0",
 		"prettier-plugin-tailwindcss": "^0.6.14",
 		"remark": "^15.0.1",
 		"remark-html": "^16.0.1",
 		"remark-link-rewrite": "^1.0.7",
-		"svelte": "^5.39.6",
+		"svelte": "^5.43.6",
 		"svelte-adapter-ghpages": "^0.2.2",
-		"svelte-check": "^4.3.2",
-		"tailwindcss": "^4.1.13",
-		"typescript": "^5.9.2",
-		"vite": "^6.3.6",
-		"@sveltejs/adapter-node": "^5.3.2",
-		"mdsvex-relative-images": "^2.0.0"
+		"svelte-check": "^4.3.4",
+		"tailwindcss": "^4.1.17",
+		"typescript": "^5.9.3",
+		"vite": "^6.4.1"
 	},
 	"dependencies": {
 		"carta-md": "^4.11.1",
-		"dotenv": "^17.2.2",
-		"flowbite-svelte": "^1.14.6",
+		"dotenv": "^17.2.3",
+		"flowbite-svelte": "^1.28.0",
 		"lodash-es": "^4.17.21",
 		"open-graph-scraper": "^6.10.0",
-		"shiki": "^3.13.0"
+		"shiki": "^3.15.0"
 	},
 	"pnpm": {
 		"overrides": {
 			"cookie": "1.0.2"
-		}
+		},
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
