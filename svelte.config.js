@@ -1,6 +1,6 @@
 import { mdsvex, escapeSvelte } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
-import adapterGhpages from 'svelte-adapter-ghpages'
+import adapter from '@sveltejs/adapter-static'
 import imgLinks from '@pondorasti/remark-img-links'
 import { createHighlighter } from 'shiki'
 
@@ -14,7 +14,6 @@ plugins.push(relativeImages)
 
 if (process.env.BUILD_MODE === 'production') {
 	blogUrl = `${process.env.BLOG_URL}${process.env.PAGES_BASE}/`
-	// blogUrl = `${process.env.PAGES_BASE}/`
 	plugins.push([imgLinks, { absolutePath: blogUrl }])
 }
 
@@ -27,12 +26,15 @@ const highlighter = await createHighlighter({
 
 const config = {
 	kit: {
-		adapter: adapterGhpages({
+		adapter: adapter({
 			// default options are shown
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
 		}),
+		prerender: {
+			handleUnseenRoutes: 'warn',
+		},
 	},
 	paths: {
 		base: process.env.BUILD_MODE === 'production' ? process.env.PAGES_BASE : '',
