@@ -44,7 +44,7 @@
 		"remark": "^15.0.1",
 		"remark-html": "^16.0.1",
 		"remark-link-rewrite": "^1.0.7",
-		"svelte": "^5.55.0",
+		"svelte": "^5.55.5",
 		"svelte-adapter-ghpages": "^0.2.2",
 		"svelte-check": "^4.4.5",
 		"tailwindcss": "^4.3.0",
