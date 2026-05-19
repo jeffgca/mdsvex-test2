@@ -21,7 +21,7 @@
 		"@eslint/compat": "^2.1.0",
 		"@eslint/js": "^9.39.4",
 		"@pondorasti/remark-img-links": "^1.0.8",
-		"@shikijs/rehype": "^3.23.0",
+		"@shikijs/rehype": "^4.1.0",
 		"@sveltejs/adapter-node": "^5.5.4",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.60.1",
