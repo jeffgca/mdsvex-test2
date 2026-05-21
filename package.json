@@ -17,6 +17,11 @@
 		"test:run": "vitest run",
 		"coverage": "vitest run --coverage"
 	},
+	"pnpm": {
+		"overrides": {
+			"cookie@<0.7.0": ">=0.7.0"
+		}
+	},
 	"devDependencies": {
 		"@eslint/compat": "^2.1.0",
 		"@eslint/js": "^9.39.4",
