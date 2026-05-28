@@ -27,8 +27,8 @@ importers:
         specifier: ^6.11.0
         version: 6.11.0
       shiki:
-        specifier: ^3.23.0
-        version: 3.23.0
+        specifier: ^4.1.0
+        version: 4.1.0
     devDependencies:
       '@eslint/compat':
         specifier: ^2.1.0
