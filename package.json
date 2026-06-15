@@ -17,25 +17,20 @@
 		"test:run": "vitest run",
 		"coverage": "vitest run --coverage"
 	},
-	"pnpm": {
-		"overrides": {
-			"cookie@<0.7.0": ">=0.7.0"
-		}
-	},
 	"devDependencies": {
 		"@eslint/compat": "^2.1.0",
 		"@eslint/js": "^10.0.1",
 		"@pondorasti/remark-img-links": "^1.0.8",
-		"@shikijs/rehype": "^4.1.0",
+		"@shikijs/rehype": "^4.2.0",
 		"@sveltejs/adapter-node": "^5.5.4",
 		"@sveltejs/adapter-static": "^3.0.10",
-		"@sveltejs/kit": "^2.61.1",
+		"@sveltejs/kit": "^2.65.1",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
-		"@tailwindcss/typography": "^0.5.19",
-		"@tailwindcss/vite": "^4.3.0",
+		"@tailwindcss/typography": "^0.5.20",
+		"@tailwindcss/vite": "^4.3.1",
 		"@testing-library/jest-dom": "^6.9.1",
 		"@testing-library/svelte": "^5.3.1",
-		"@vitest/ui": "^4.1.6",
+		"@vitest/ui": "^4.1.8",
 		"eslint": "^10.5.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.19.0",
@@ -43,19 +38,19 @@
 		"jsdom": "^27.4.0",
 		"mdsvex": "^0.12.7",
 		"mdsvex-relative-images": "^2.0.0",
-		"prettier": "^3.8.3",
+		"prettier": "^3.8.4",
 		"prettier-plugin-svelte": "^4.1.0",
 		"prettier-plugin-tailwindcss": "^0.8.0",
 		"remark": "^15.0.1",
 		"remark-html": "^16.0.1",
 		"remark-link-rewrite": "^1.0.7",
-		"svelte": "^5.55.10",
+		"svelte": "^5.56.3",
 		"svelte-adapter-ghpages": "^0.2.2",
-		"svelte-check": "^4.5.0",
-		"tailwindcss": "^4.3.0",
+		"svelte-check": "^4.6.0",
+		"tailwindcss": "^4.3.1",
 		"typescript": "^6.0.3",
 		"vite": "^6.4.3",
-		"vitest": "^4.1.6"
+		"vitest": "^4.1.8"
 	},
 	"dependencies": {
 		"carta-md": "^4.11.2",
@@ -63,6 +58,6 @@
 		"flowbite-svelte": "^1.33.1",
 		"lodash-es": "^4.18.1",
 		"open-graph-scraper": "^6.11.0",
-		"shiki": "^4.1.0"
+		"shiki": "^4.2.0"
 	}
 }
