@@ -5,6 +5,9 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
+	build: {
+		target: 'esnext',
+	},
 	test: {
 		globals: true,
 		environment: 'jsdom',
