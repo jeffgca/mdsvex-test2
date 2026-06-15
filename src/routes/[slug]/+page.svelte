@@ -1,19 +1,12 @@
 <script>
-// @ts-nocheck
+	import Posts from '$lib/components/Posts.svelte'
 
-
-// console.log('here')
-
-import Posts from "$lib/components/Posts.svelte"
-
-	let { data } = $props();
-let summary = false
-const size = 6
-
+	let { data } = $props()
+	let summary = false
+	const size = 6
 </script>
 
-<Posts {data} size={size} summary />
+<Posts {data} {size} summary />
 
 <style>
-
 </style>
