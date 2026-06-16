@@ -5,6 +5,7 @@
 	import { goto } from '$app/navigation'
 	import _ from 'lodash-es'
 	import { Pagination } from 'flowbite-svelte'
+	import { resolve } from '$app/paths'
 
 	import Post from './Post.svelte'
 
@@ -67,20 +68,20 @@
 
 	function prev() {
 		if (currentSlug > 1) {
-			goto(`/${currentSlug - 1}`)
+			goto(resolve(`/${currentSlug - 1}`))
 		}
 	}
 
 	function next() {
 		if (currentSlug < pages.length) {
-			goto(`/${parseInt(currentSlug) + 1}`)
+			goto(resolve(`/${parseInt(currentSlug) + 1}`))
 		}
 	}
 </script>
 
 <div class="content-wrapper prose">
 	{#if posts.length > 0}
-		{#each posts as post}
+		{#each posts as post (post.id)}
 			<Post {post} {summary} />
 		{/each}
 	{:else}

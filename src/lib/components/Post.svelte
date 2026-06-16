@@ -8,7 +8,7 @@
 
 	/** @type {Props} */
 	let { post = [], summary = false } = $props()
-	import { base, resolve } from '$app/paths'
+	import { resolve } from '$app/paths'
 </script>
 
 <div>
