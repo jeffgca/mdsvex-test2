@@ -63,7 +63,7 @@ export const fetchMarkdownPosts = async () => {
 
 			console.log('kebab', kebab, 'currentIds', currentIds)
 
-			let curId = false
+			let curId
 
 			if (_.has(currentIds, kebab)) {
 				currentIds[kebab] += 1
