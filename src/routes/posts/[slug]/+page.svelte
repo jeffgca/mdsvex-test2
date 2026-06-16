@@ -1,7 +1,5 @@
 <script>
 	let { data } = $props()
-
-	// console.log('data', data)
 </script>
 
 <article class="prose">

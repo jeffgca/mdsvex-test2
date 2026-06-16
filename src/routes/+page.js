@@ -1,3 +1,5 @@
-export async function load({ params }) {
-	return params
+import { posts } from '$lib/components/data/posts.svelte'
+
+export async function load() {
+	return { posts }
 }

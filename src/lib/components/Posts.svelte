@@ -17,7 +17,7 @@
 	 */
 
 	/** @type {Props} */
-	let { data, size = 6, summary = true } = $props()
+	let { data, size = 6 } = $props()
 
 	function getPages(posts, size, path) {
 		let l = posts.length
@@ -48,6 +48,9 @@
 	}
 
 	let slug = 1
+
+	// console.log('data', data)
+
 	let pages = getPages(data.posts, size)
 	let posts = $state([])
 
@@ -79,7 +82,7 @@
 <div class="content-wrapper prose">
 	{#if posts.length > 0}
 		{#each posts as post (post.id)}
-			<Post {post} {summary} />
+			<Post {post} />
 		{/each}
 	{:else}
 		<div>No posts yet?</div>
