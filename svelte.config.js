@@ -1,20 +1,20 @@
 import { mdsvex, escapeSvelte } from 'mdsvex'
 import relativeImages from 'mdsvex-relative-images'
 import adapter from '@sveltejs/adapter-static'
-import imgLinks from '@pondorasti/remark-img-links'
+// import imgLinks from '@pondorasti/remark-img-links'
 import { createHighlighter } from 'shiki'
 
 // import { getOpenGraph, getTwitterCard } from './src/lib/scripts/opengraph.js'
 import 'dotenv/config'
 
-let blogUrl = '/'
+// let blogUrl = '/'
 let plugins = []
 
 plugins.push(relativeImages)
 
 if (process.env.BUILD_MODE === 'production') {
-	blogUrl = `${process.env.BLOG_URL}${process.env.PAGES_BASE}/`
-	plugins.push([imgLinks, { absolutePath: blogUrl }])
+	// blogUrl = `${process.env.BLOG_URL}${process.env.PAGES_BASE}/`
+	// plugins.push([imgLinks, { absolutePath: blogUrl }])
 }
 
 const theme = 'github-dark'
@@ -55,7 +55,5 @@ const config = {
 		}),
 	],
 }
-
-// console.log('XXX', config.paths)
 
 export default config

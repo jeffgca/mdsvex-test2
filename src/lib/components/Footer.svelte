@@ -1,26 +1,18 @@
 <script>
-	// @ts-nocheck
-	import { base, resolve } from '$app/paths'
-	import _ from 'lodash-es'
-
-	// console.log(
-	// 	_.map(['foo', 'bar', 'baz'], (str) => {
-	// 		return resolve(`${base}/${str}`)
-	// 	}),
-	// )
+	import { resolve } from '$app/paths'
 </script>
 
 <footer>
 	<nav>
 		<ul>
 			<li>
-				<a href="{base}/posts">Archive</a>
+				<a href={resolve(`/posts`)}>Archive</a>
 			</li>
 			<li>
-				<a href="{base}/about">About</a>
+				<a href={resolve(`/about`)}>About</a>
 			</li>
 			<li>
-				<a href="{base}/feed" target="_blank">
+				<a href={resolve(`/feed`)} target="_blank">
 					<span>Feed</span>
 				</a>
 			</li>

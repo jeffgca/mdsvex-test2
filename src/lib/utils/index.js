@@ -8,8 +8,6 @@ function getSummary(html) {
 	let regex = new RegExp(/<p>([\S\s]+?)<\/p>/, 'gm')
 	let results = [...html.matchAll(regex)].shift()
 
-	// console.log('XXX getSummary', results)
-
 	if (results[0].length > 2) {
 		return { html: `<p>${results[1]}</p>` }
 	} else {
@@ -32,9 +30,13 @@ export const fetchMarkdownPosts = async () => {
 
 	const iterablePostFiles = Object.entries(allPostFiles)
 
+	let currentIds = {}
+
 	const posts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
+
+			console.log('raw post', post)
 
 			let content = { html: 'content XXX' }
 			let summary = { html: 'summary XXX' }
@@ -56,12 +58,28 @@ export const fetchMarkdownPosts = async () => {
 				.replace('/md', '')
 				.replace(/\.md$/, '')
 
+			// let id = generateIdFromTitle(post.metadata.title, ids)
+			let kebab = _.kebabCase(post.metadata.title)
+
+			console.log('kebab', kebab, 'currentIds', currentIds)
+
+			let curId = false
+
+			if (_.has(currentIds, kebab)) {
+				currentIds[kebab] += 1
+				curId = `${kebab}-${currentIds[kebab]}`
+			} else {
+				currentIds[kebab] = 1
+				curId = kebab
+			}
+
 			let ret = {
 				date: post.metadata.date,
 				title: post.metadata.title,
 				path: postPath,
 				content: content,
 				summary: summary,
+				id: curId,
 			}
 
 			return ret
