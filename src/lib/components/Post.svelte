@@ -9,6 +9,8 @@
 	/** @type {Props} */
 	let { post = [], summary = false } = $props()
 	import { resolve } from '$app/paths'
+
+	console.log('post', post)
 </script>
 
 <div>
@@ -22,7 +24,8 @@
 		{@html post.summary.html}
 		<div><a href={resolve(post.path)}>Read more...</a></div>
 	{:else}
+		XXX
 		{@html post.content.html}
 	{/if}
-	<div>Published {new Date(post.date).toDateString()}</div>
+	<div>!!! Published {new Date(post.date).toDateString()}</div>
 </div>

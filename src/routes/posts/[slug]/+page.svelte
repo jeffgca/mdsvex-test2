@@ -1,8 +1,11 @@
 <script>
-	let { data } = $props();
+	let { data } = $props()
+
+	// console.log('data', data)
 </script>
 
 <article class="prose">
+	<h1>{data.title}</h1>
 	<data.content />
 	<p>Published {new Date(data.date).toDateString()}</p>
 </article>

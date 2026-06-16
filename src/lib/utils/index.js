@@ -36,7 +36,7 @@ export const fetchMarkdownPosts = async () => {
 		iterablePostFiles.map(async ([path, resolver]) => {
 			let post = await resolver()
 
-			console.log('raw post', post)
+			// console.log('raw post', post)
 
 			let content = { html: 'content XXX' }
 			let summary = { html: 'summary XXX' }

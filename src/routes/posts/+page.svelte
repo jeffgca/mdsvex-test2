@@ -5,6 +5,8 @@
 	import Post from '$lib/components/Post.svelte'
 
 	let posts = $posts_store.posts
+
+	console.log('posts', posts)
 </script>
 
 <div class="prose">
