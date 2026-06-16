@@ -39,7 +39,7 @@
 		"mdsvex": "^0.12.7",
 		"mdsvex-relative-images": "^2.0.0",
 		"prettier": "^3.8.4",
-		"prettier-plugin-svelte": "^4.1.0",
+		"prettier-plugin-svelte": "^4.1.1",
 		"prettier-plugin-tailwindcss": "^0.8.0",
 		"remark": "^15.0.1",
 		"remark-html": "^16.0.1",
