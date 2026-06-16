@@ -4,14 +4,15 @@ export async function fetchMarkdownPosts() {
 	return Promise.all(
 		Object.entries(postFiles).map(async ([filePath, resolver]) => {
 			const post = await resolver()
-			const slug = filePath.split('/').pop()?.replace(/\.md$/, '')
+			const slug = filePath.replace(/^.*\//, '').replace(/\.md$/, '')
+			const metadata = post.metadata ?? {}
 
 			return {
-				date: post.metadata?.date,
-				title: post.metadata?.title,
+				date: metadata.date ?? '',
+				title: metadata.title ?? '',
 				path: slug,
 				summary: {
-					html: post.metadata?.description ?? '',
+					html: metadata.description ?? '',
 				},
 			}
 		}),

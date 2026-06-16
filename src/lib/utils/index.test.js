@@ -18,5 +18,7 @@ describe('fetchMarkdownPosts', () => {
 			expect(post).toHaveProperty('summary')
 			expect(post.summary).toHaveProperty('html')
 		}
+
+		expect(posts.some((post) => post.path === 'first-post')).toBe(true)
 	})
 })
