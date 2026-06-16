@@ -43,9 +43,6 @@
 	function getPosts(allPosts, slug, size) {
 		let _startIndex = (slug - 1) * size
 		let _endIndex = _startIndex + size
-
-		// console.log('indexes', _startIndex, _endIndex)
-
 		let posts = allPosts.slice(_startIndex, _endIndex)
 		return posts
 	}

@@ -1,6 +1,8 @@
 <script>
 	// @ts-nocheck
 
+	import { resolve } from '$app/paths'
+
 	/**
 	 * @typedef {Object} Props
 	 * @property {any} url
@@ -30,9 +32,9 @@
 		return data
 	}
 
-	function clickHandler(e) {
-		window.open(url, '_blank')
-	}
+	// function clickHandler(e) {
+	// 	window.open(url, '_blank')
+	// }
 
 	const proxyUrl = 'https://rlp-proxy.herokuapp.com/v2'
 	const placeholderImg = 'https://i.imgur.com/UeDNBNQ.jpeg'
@@ -42,7 +44,7 @@
 
 <a
 	class={`Container ${className}`}
-	href={url}
+	href={resolve(url)}
 	target="_blank"
 	rel="noopener noreferrer"
 	style={`width:${width};height:${height};textAlign:${textAlign}`}
