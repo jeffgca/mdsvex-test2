@@ -6,7 +6,15 @@ import { defineConfig } from 'vite'
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	build: {
-		target: 'esnext',
+		target: 'es2022',
+	},
+	esbuild: {
+		target: 'es2022',
+	},
+	optimizeDeps: {
+		esbuildOptions: {
+			target: 'esnext',
+		},
 	},
 	test: {
 		globals: true,
