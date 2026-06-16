@@ -6,7 +6,7 @@
 	const size = 6
 </script>
 
-<Posts {data} {size} summary />
+<Posts {data} {size} {summary} />
 
 <style>
 </style>
