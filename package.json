@@ -58,6 +58,6 @@
 		"flowbite-svelte": "^1.33.1",
 		"lodash-es": "^4.18.1",
 		"open-graph-scraper": "^6.11.0",
-		"shiki": "^4.2.0"
+		"shiki": "^4.3.0"
 	}
 }
