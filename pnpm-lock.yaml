@@ -13,8 +13,8 @@ importers:
   .:
     dependencies:
       carta-md:
-        specifier: ^4.11.2
-        version: 4.11.2(svelte@5.57.1)
+        specifier: ^4.11.3
+        version: 4.11.3(svelte@5.57.1)
       dotenv:
         specifier: ^18.0.4
         version: 18.0.4
@@ -1114,8 +1114,8 @@ packages:
   cacheable@2.5.0:
     resolution: {integrity: sha512-60cyAOytib/OzBw1JNSoSV/boK1AtHryDIjvVBk7XbN4ugfkM3+Sry7fEjNgPMGgOjuaZPAp8ruZ0Cxafwyq9g==}
 
-  carta-md@4.11.2:
-    resolution: {integrity: sha512-oqx2wxuEK4xpT1dq23oYTPSdhWKFwGLYqwjeNXPda0q8rnmz+eOygx/oxApUuEhnOtjUNE4f3D23e0f83HSLEQ==}
+  carta-md@4.11.3:
+    resolution: {integrity: sha512-gCigjR5Umw9ISmu8xQXlJoR/OeRAZS/5szCYZNikKgCdsj8ZUvbHXFmYQP1C5y5+JyMNdC5h7+qPnQK9kGsYjQ==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -3488,7 +3488,7 @@ snapshots:
       keyv: 5.6.0
       qified: 0.10.1
 
-  carta-md@4.11.2(svelte@5.57.1):
+  carta-md@4.11.3(svelte@5.57.1):
     dependencies:
       diff: 5.2.2
       esm-env: 1.2.2
