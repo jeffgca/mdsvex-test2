@@ -6,6 +6,7 @@ settings:
 
 overrides:
   cookie: 1.0.2
+  '@sveltejs/kit>cookie': ^2.0.1
   esbuild: '>=0.28.1'
 
 importers:
@@ -1178,9 +1179,9 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-  cookie@1.0.2:
-    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
-    engines: {node: '>=18'}
+  cookie@2.0.2:
+    resolution: {integrity: sha512-SL0cVuEdETEp7pN0FuZb01toc3vnODEfVUCooxG1SJN0yIirh7JMb9X9bvfCFf0vzzbT68RdbKDHYTiWy7a7iw==}
+    engines: {node: '>=22'}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -3165,7 +3166,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.1
       '@standard-schema/spec': 1.1.0
       '@sveltejs/vite-plugin-svelte': 7.3.1(svelte@5.57.3)(vite@8.3.6(esbuild@0.28.2)(jiti@2.7.0))
-      cookie: 1.0.2
+      cookie: 2.0.2
       devalue: 5.9.4
       esm-env: 1.2.2
       magic-string: 1.4.5
@@ -3513,7 +3514,7 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cookie@1.0.2: {}
+  cookie@2.0.2: {}
 
   cross-spawn@7.0.6:
     dependencies:
@@ -3842,7 +3843,7 @@ snapshots:
   flowbite-datepicker@1.3.2(rollup@4.68.0):
     dependencies:
       '@rollup/plugin-node-resolve': 15.3.1(rollup@4.68.0)
-      flowbite: 2.5.2
+      flowbite: 2.5.2(rollup@4.68.0)
     transitivePeerDependencies:
       - rollup
 
@@ -3862,11 +3863,13 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  flowbite@2.5.2:
+  flowbite@2.5.2(rollup@4.68.0):
     dependencies:
       '@popperjs/core': 2.11.8
       flowbite-datepicker: 1.3.2(rollup@4.68.0)
       mini-svg-data-uri: 1.4.4
+    transitivePeerDependencies:
+      - rollup
 
   flowbite@3.1.2(rollup@4.68.0):
     dependencies:

@@ -13,6 +13,7 @@ let plugins = []
 plugins.push(relativeImages)
 
 const theme = 'github-dark'
+const pagesBase = process.env.PAGES_BASE?.replace(/^\/+|\/+$/g, '')
 
 const highlighter = await createHighlighter({
 	themes: [theme],
@@ -20,20 +21,24 @@ const highlighter = await createHighlighter({
 })
 
 const config = {
-	kit: {
-		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
-			fallback: 'index.html',
-			strict: false,
-		}),
-		prerender: {
-			handleUnseenRoutes: 'warn',
-		},
+	adapter: adapter({
+		// default options are shown
+		pages: 'build',
+		assets: 'build',
+		fallback: 'index.html',
+		strict: false,
+	}),
+	prerender: {
+		handleUnseenRoutes: 'warn',
+	},
+	alias: {
+		$lib: 'src/lib',
 	},
 	paths: {
-		base: process.env.BUILD_MODE === 'production' ? process.env.PAGES_BASE : '',
+		base:
+			process.env.BUILD_MODE === 'production' && pagesBase
+				? `/${pagesBase}`
+				: '',
 	},
 	extensions: ['.svelte', '.svx', '.md'],
 	preprocess: [
