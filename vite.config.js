@@ -1,11 +1,27 @@
 /// <reference types="vitest/config" />
 import tailwindcss from '@tailwindcss/vite'
 import { sveltekit } from '@sveltejs/kit/vite'
+import { mdsvex } from 'mdsvex'
+import { createHighlighter } from 'shiki'
 import { defineConfig } from 'vite'
 import svelteConfig from './svelte-options.js'
 
+const theme = 'github-dark'
+const highlighter = await createHighlighter({
+	themes: [theme],
+	langs: ['javascript', 'typescript'],
+})
+
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(svelteConfig)],
+	plugins: [
+		tailwindcss(),
+		mdsvex({
+			extensions: ['.svx', '.md'],
+			highlight: (code, { lang }) =>
+				highlighter.codeToHtml(code, { lang, theme }),
+		}),
+		sveltekit(svelteConfig),
+	],
 	build: {
 		target: 'es2022',
 	},

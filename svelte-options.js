@@ -1,24 +1,8 @@
-import { mdsvex, escapeSvelte } from 'mdsvex'
-import relativeImages from 'mdsvex-relative-images'
 import adapter from '@sveltejs/adapter-static'
-// import imgLinks from '@pondorasti/remark-img-links'
-import { createHighlighter } from 'shiki'
 
-// import { getOpenGraph, getTwitterCard } from './src/lib/scripts/opengraph.js'
 import 'dotenv/config'
 
-// let blogUrl = '/'
-let plugins = []
-
-plugins.push(relativeImages)
-
-const theme = 'github-dark'
 const pagesBase = process.env.PAGES_BASE?.replace(/^\/+|\/+$/g, '')
-
-const highlighter = await createHighlighter({
-	themes: [theme],
-	langs: ['javascript', 'typescript'],
-})
 
 const config = {
 	adapter: adapter({
@@ -40,21 +24,6 @@ const config = {
 				? `/${pagesBase}`
 				: '',
 	},
-	extensions: ['.svelte', '.svx', '.md'],
-	preprocess: [
-		mdsvex({
-			extensions: ['.svx', '.md'],
-			remarkPlugins: plugins,
-			highlight: {
-				highlighter: async (code, lang) => {
-					const html = escapeSvelte(
-						highlighter.codeToHtml(code, { lang, theme }),
-					)
-					return `{@html \`${html}\` }`
-				},
-			},
-		}),
-	],
 }
 
 export default config
