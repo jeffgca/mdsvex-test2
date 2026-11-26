@@ -5,6 +5,7 @@ env:
   BUILD_MODE: production
   PAGES_BASE: ${{ github.event.repository.name }}
   BLOG_URL: https://${{ github.repository_owner }}.github.io/
+  PAGES_ARTIFACT_NAME: github-pages-${{ github.run_attempt }}
 
 on:
   # Runs on pushes targeting the default branch
@@ -57,13 +58,20 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          # Upload entire repository
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
           path: 'build/'
       - name: Deploy to GitHub Pages
         id: deployment
         continue-on-error: true
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
+      - name: Wait before retrying deployment
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 15
       - name: Retry deployment
         id: deployment_retry
         if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
